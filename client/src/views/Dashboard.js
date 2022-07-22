@@ -30,7 +30,9 @@ const Dashboard = () => {
 		setShowToast
 	} = useContext(PostContext)
 
-
+	// Start: Get all posts
+	useEffect(() => getPosts(), [])
+	
 	let body = null
 
 	if (postsLoading) {
